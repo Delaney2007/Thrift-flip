@@ -1,0 +1,44 @@
+
+/* Minimal responsive CSS for ThriftFlip */
+:root{
+  --brand-green:#2f8f63;
+  --accent:#ff6f61;
+  --muted:#f4f1ec;
+  --text:#222;
+  --max-width:1000px;
+}
+*{box-sizing:border-box}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--muted);margin:0}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:white;border-bottom:1px solid #e6e6e6}
+.site-header .container{display:flex;align-items:center;justify-content:space-between}
+.brand a{color:var(--brand-green);text-decoration:none}
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--text);text-decoration:none;padding:.5rem}
+.menu-btn{display:none;background:none;border:0;font-size:1.4rem;padding:.5rem}
+.hero{padding:2rem 0;text-align:center}
+.hero h2{color:var(--brand-green);margin:.5rem 0}
+.cta{display:inline-block;background:var(--accent);color:white;padding:.7rem 1rem;border-radius:6px;text-decoration:none;margin-top:1rem}
+.cta.secondary{background:transparent;color:var(--brand-green);border:2px solid var(--brand-green);padding:.6rem .9rem}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0}
+.features div{background:white;padding:1rem;border-radius:8px}
+.social-proof{background:white;padding:1rem;border-radius:8px;margin-bottom:2rem;text-align:center}
+.site-footer{background:white;border-top:1px solid #e6e6e6;padding:1rem;margin-top:2rem;text-align:center}
+
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.product{background:white;padding:1rem;border-radius:8px;text-align:center}
+.product .placeholder{height:120px;background:#ddd;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#666;font-weight:bold}
+.meta{font-size:.9rem;color:#666}
+.price{font-weight:bold;margin:0.5rem 0}
+
+form label{display:block;margin:.5rem 0}
+input,textarea{width:100%;padding:.5rem;border:1px solid #ccc;border-radius:6px}
+.privacy-note{background:#fff;padding:1rem;border-radius:6px;margin-top:1rem}
+
+/* Responsive */
+@media (max-width:800px){
+  .features{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .menu-btn{display:block}
+}
